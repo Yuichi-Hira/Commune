@@ -7,5 +7,9 @@ class ContentsController < ApplicationController
   def new
   end
 
+  def create
+    Content.create(contributor: "", image: "", body: "")
+  end
+
 
 end
