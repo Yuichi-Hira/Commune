@@ -8,7 +8,7 @@ class ContentsController < ApplicationController
   end
 
   def create
-    Content.create(name: params[:contributor], image: params[:image_url], body: params[:body])
+    Content.create(content_params)
   end
 
 
