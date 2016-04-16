@@ -4,5 +4,8 @@ class ContentsController < ApplicationController
     @contents  = Content.all
   end
 
+  def new
+  end
+
 
 end
