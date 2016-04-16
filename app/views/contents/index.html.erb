@@ -94,15 +94,17 @@
 <section id="contents" class="section contents">
   <div class="container-fluid">
     <div class="row">
+    <% @contents.each do |content| %>
       <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
         <div class="caption">
           <div class="caption-content">
-            <h3><%= @title %></h3>
-            <h4><%= @contributor %></h4>
+            <h3><%= content.title %></h3>
+            <h4><%= content.contributor %></h4>
           </div>
         </div>
-        <img src="<%= asset_path("#{@image_url}") %>"  class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
+        <img src="<%= asset_path("#{content.image_url}") %>"  class="img-responsive" alt=""> </a>
+        <% end %>
+         </div>
     </div>
   </div>
 </section>
