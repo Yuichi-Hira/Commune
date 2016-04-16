@@ -11,5 +11,10 @@ class ContentsController < ApplicationController
     Content.create(content_params)
   end
 
+  private
+  def content_params
+    params.permit(:contributor, :image, :body)
+  end
+
 
 end
