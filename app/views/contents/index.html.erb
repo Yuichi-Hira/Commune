@@ -104,6 +104,7 @@
         </div>
         <img src="<%= asset_path("#{content.image_url}") %>"  class="img-responsive" alt=""> </a>
         <% end %>
+        <%= paginate(@contents) %>
          </div>
     </div>
   </div>
