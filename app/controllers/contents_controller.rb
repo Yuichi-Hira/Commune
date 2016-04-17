@@ -10,7 +10,7 @@ class ContentsController < ApplicationController
   end
 
   def create
-    Content.create(name: content_params[:name], image: content_params[:image], body: content_params[:body], user_id: current_user.id)
+    Content.create(title: content_params[:title], contributor: content_params[:contributor], image_url: content_params[:image_url], body: content_params[:body], user_id: current_user.id)
   end
 
   private
