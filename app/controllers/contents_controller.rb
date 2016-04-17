@@ -13,7 +13,7 @@ class ContentsController < ApplicationController
 
   private
   def content_params
-    params.permit(:contributor, :image, :body)
+    params.permit(:title, :contributor, :image_url, :body)
   end
 
 
