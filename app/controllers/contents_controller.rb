@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
 
   def index
-    @contents  = Content.all.order("create_at DESC")
+    @contents  = Content.all.order("created_at DESC")
   end
 
   def new
