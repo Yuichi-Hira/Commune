@@ -91,18 +91,18 @@
 
 
 <!-- portfolio grid section -->
-<section id="contents" class="section contents">
+ <% @contents.each do |content| %>
+<section id="content" class="section contents">
   <div class="container-fluid">
     <div class="row">
-    <% @contents.each do |content| %>
       <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
         <div class="caption">
           <div class="caption-content">
             <h3><%= content.title %></h3>
-            <h4><%= content.contributor %></h4>
+            <h4><%= user.name %></h4>
           </div>
         </div>
-        <img src="<%= asset_path("#{content.image_url}") %>"  class="img-responsive" alt=""> </a>
+        <img src="<%= asset_path("#{content.image}") %>"  class="img-responsive" alt=""> </a>
         <% end %>
         <%= paginate(@contents) %>
          </div>
