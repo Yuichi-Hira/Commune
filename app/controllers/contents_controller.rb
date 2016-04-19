@@ -11,12 +11,12 @@ class ContentsController < ApplicationController
   end
 
   def create
-    Content.create(title: content_params[:title], image:content_params[:image], body: content_params[:body], user_id: current_user.id)
+    Content.create(content_params)
   end
 
   private
   def content_params
-    params.permit(:title, :image, :body)
+    params.require(:content).permit(:title, :image, :body).merge(user_id: current_user.id)
   end
 
   def move_to_index
