@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'contents#index'
   resources :contents, only: [:index, :new, :create]
   get   'users/:id'  =>  'users#show'
+  delete  'contents/:id'   =>  'contents#destroy'
 end
