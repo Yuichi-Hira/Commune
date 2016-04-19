@@ -7,15 +7,16 @@ class ContentsController < ApplicationController
   end
 
   def new
+    @content = Content.new
   end
 
   def create
-    Content.create(title: content_params[:title], contributor: content_params[:contributor], image_url: content_params[:image_url], body: content_params[:body], user_id: current_user.id)
+    Content.create(title: content_params[:title], image:content_params[:image], body: content_params[:body], user_id: current_user.id)
   end
 
   private
   def content_params
-    params.permit(:title, :contributor, :image_url, :body)
+    params.permit(:title, :image, :body)
   end
 
   def move_to_index

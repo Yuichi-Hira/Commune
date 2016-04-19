@@ -4,8 +4,4 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_attached_file :image,
-                     styles: { medium: "400x600", thmb: "200x300"}
-         validates_attachment_content_type :avatar,
-                                      content_type: ["image/jpg","image/jpeg","image/png"]
 end

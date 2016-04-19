@@ -2,7 +2,7 @@
     <p><%= @name %>さんの投稿一覧</p>
     <% @contents.each do |content| %>
       <div class="content_post" style="background-image: url(<%= content.image %>);">
-        <%= simple_format(content.text) %>
+        <%= simple_format(content.body) %>
         <span class="name"><%= content.name %></span>
       </div>
     <% end %>

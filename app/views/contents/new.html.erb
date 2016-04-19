@@ -1,13 +1,14 @@
  <div class="contents row">
-  <%= form_tag('/contents', method: :post) do %>
+  <%= form_for (@content) do |f| %>
     <h3>
       投稿する
     </h3>
     <input placeholder="title" tipe="text" name="title">
-    <input placeholder="contributor" type="text" name="contributor">
     <div class="form-group">
     <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
+    <div class="field">
+    <%= f.file_field :image %>
+  </div>
     <p class="help-block">Example block-level help text here.</p>
     <textarea cols="30" name="body" placeholder="body" rows="10"></textarea>
     <input type="submit" value="SENT">

@@ -99,10 +99,9 @@
         <div class="caption">
           <div class="caption-content">
             <h3><%= content.title %></h3>
-            <h4><%= user.name %></h4>
+            <h4><%= current_user.name %></h4>
           </div>
         </div>
-        <img src="<%= asset_path("#{content.image}") %>"  class="img-responsive" alt=""> </a>
         <% end %>
         <%= paginate(@contents) %>
          </div>
