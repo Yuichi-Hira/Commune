@@ -3,14 +3,14 @@
     <h3>
       投稿する
     </h3>
-    <input placeholder="title" tipe="text" name="title">
+    <%= f.text_field :title %>
     <div class="form-group">
     <label for="exampleInputFile">File input</label>
     <div class="field">
     <%= f.file_field :image %>
   </div>
     <p class="help-block">Example block-level help text here.</p>
-    <textarea cols="30" name="body" placeholder="body" rows="10"></textarea>
-    <input type="submit" value="SENT">
+    <%= f.text_field :body %>
+    <%= f.submit "SENT" %>
   <% end %>
 </div>
