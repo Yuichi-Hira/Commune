@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get   'users/:id'  =>  'users#show'
   delete  'contents/:id'   =>  'contents#destroy'
   get   'contents/:id'  => 'contents#show'
+  get   'contents/:id'  => 'contents#show'
 end
