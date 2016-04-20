@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :contents, only: [:index, :new, :create]
   get   'users/:id'  =>  'users#show'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   delete  'contents/:id'   =>  'contents#destroy'
   get   'contents/:id'  => 'contents#show'
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   get   'contents/:id'  => 'contents#show'
