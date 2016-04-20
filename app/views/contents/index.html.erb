@@ -92,7 +92,7 @@
 
 <!-- portfolio grid section -->
  <% @contents.each do |content| %>
-<section id="content" class="section contents">
+<section id="portfolio" class="section portfolio">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
@@ -102,11 +102,12 @@
             <h4><%= current_user.name %></h4>
           </div>
         </div>
-        <% end %>
-        <%= paginate(@contents) %>
+        <%= image_tag("#{content.image.url(:thumb)}", :class => "img-responsive") %> </a>
          </div>
     </div>
   </div>
+  <% end %>
+  <%= paginate(@contents) %>
 </section>
 <!-- portfolio grid section -->
 
