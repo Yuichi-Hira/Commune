@@ -101,7 +101,8 @@
            <h3><%= content.title %></h3>
             <h4><%= current_user.name %></h4>
           </div>
-         <%= image_tag("@content.image") %></a></div>
+        </div>
+         <%= image_tag("#{content.image}", :class => "img-responsive") %></a></div>
         </div>
         <% end %>
         <%= paginate(@contents) %>
