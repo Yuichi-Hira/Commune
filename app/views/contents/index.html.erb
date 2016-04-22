@@ -7,6 +7,7 @@
           <li><a href="#header-slider">Home</a></li>
           <li><a href="#services">Our Services</a></li>
           <li><a href="#contents">Contents</a></li>
+          <li><a href="#Event">Event</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -95,14 +96,14 @@
  <section id="portfolio" class="section portfolio">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
+      <div class="col-sm-6 portfolio-item"><a href="/contents/<%= content.id %>" class="portfolio-link">
         <div class="caption">
           <div class="caption-content">
            <h3><%= content.title %></h3>
             <h4><%= current_user.name %></h4>
           </div>
         </div>
-         <%= image_tag("#{content.image}", :class => "img-responsive") %></a></div>
+                 <%= image_tag("#{content.image}", :class => "img-responsive") %></a></div>
         </div>
         <% end %>
         <%= paginate(@contents) %>
