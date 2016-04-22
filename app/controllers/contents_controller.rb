@@ -14,6 +14,11 @@ class ContentsController < ApplicationController
     Content.create(content_params)
   end
 
+  def show
+  @content = Content.find(params[:id])
+end
+
+
   private
   def content_params
     params.require(:content).permit(:title, :image, :body).merge(user_id: current_user.id)
@@ -23,9 +28,6 @@ class ContentsController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
 
- def show
-  @content = Content.find(params[:id])
-end
 
 
 end
