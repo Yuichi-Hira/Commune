@@ -8,6 +8,10 @@
     <label for="exampleInputFile">File input</label>
     <div class="field">
     <%= f.file_field :image %>
+    <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
   </div>
     <p class="help-block">Example block-level help text here.</p>
     <%= f.text_field :body %>
