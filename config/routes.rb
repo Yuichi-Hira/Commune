@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'contents#index'
-  resources :contents, only: [:index, :new, :create]
+  resources :contents, only: [:index, :new, :create, :show]
   get   'users/:id'  =>  'users#show'
 delete  'contents/:id'   =>  'contents#destroy'
-  get   'contents/:id'  => 'contents#show'
   get   'contents/:id'  => 'contents#show'
 end
