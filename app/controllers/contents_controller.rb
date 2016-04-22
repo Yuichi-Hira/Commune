@@ -21,7 +21,7 @@ end
 
   private
   def content_params
-    params.require(:content).permit(:title, :image, :body).merge(user_id: current_user.id)
+    params.require(:content).permit(:title, :image, :body, :category_id).merge(user_id: current_user.id)
   end
 
   def move_to_index
