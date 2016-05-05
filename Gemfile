@@ -48,5 +48,6 @@ group :development do
   gem 'devise'
   gem 'paperclip'
   gem 'pry-doc'
+  gem 'bootstrap_form'
 end
 
