@@ -45,9 +45,11 @@ group :development do
   gem 'spring'
   gem 'pry-rails'
   gem 'kaminari'
-  gem 'devise'
+  gem 'devise', '~> 3.2.4'
   gem 'paperclip'
   gem 'pry-doc'
   gem 'bootstrap_form'
+  gem 'bootstrap-sass', '~> 3.1.1.1'
+  gem 'bootstrap-sass-extras', '~> 0.0.6'
 end
 
