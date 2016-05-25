@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  has_many :contents, ->{ order(:id)}
+  has_many :posts
 end

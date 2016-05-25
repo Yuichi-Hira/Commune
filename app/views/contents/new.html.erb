@@ -10,12 +10,12 @@
     <%= f.file_field :image %>
     <form name="selbox">
 <p>カテゴリーを選択してください</p>
-<select name="category_id" >
-<option value="">*カテゴリー選択</option>
-<option value="">Studio</option>
-<option value="">Creater</option>
-<option value="">Event&Workshop</option>
-<option value="">Item</option>
+<select class="form-control select-parent" name="category[category_id]" id="category_id">
+  <option value=""></option>
+  <option data-children-path="/categories/1/" value="1">Studio</option>
+  <option data-children-path="/categories/2/" value="2">Creater</option>
+  <option data-children-path="/categories/3/" value="3">Event&Workshop</option>
+  <option data-children-path="/categories/4/" value="4">Item</option>
 </select>
 
   </div>
